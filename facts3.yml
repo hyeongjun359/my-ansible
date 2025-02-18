@@ -1,0 +1,13 @@
+---
+
+- hosts: db
+  gather_facts : no
+
+  tasks:
+  - name: Print all facts
+    ansible.builtin.debug:
+      msg: > 
+        the default IPv4 address of {{ ansible_facts.fqdn }}
+        is {{ ansible_facts.distribution }}
+
+

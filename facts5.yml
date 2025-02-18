@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost  # ansible 서버가 자기자신 
+
+         
+  tasks:
+  - name: Print local facts
+    ansible.builtin.debug:         # debug: 출력 
+      var: ansible_local          # var 변수 
+
+
+
+
